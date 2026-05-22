@@ -9,7 +9,7 @@ Chrome extension that copies `access_token` and `refresh_token` from a logged-in
 1. Open `chrome://extensions`.
 2. Enable Developer mode.
 3. Click Load unpacked.
-4. Select this directory: `/Users/kakeng.loh/Code/direct-preview-auth`.
+4. Select the cloned repository directory.
 
 ## Usage
 
