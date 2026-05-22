@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Reap Preview Auth",
+  "version": "0.1.0",
+  "description": "Copies staging auth tokens into Reap Netlify deploy preview tabs.",
+  "permissions": ["storage", "tabs", "scripting"],
+  "host_permissions": [
+    "https://staging.dashboard.reap.global/*",
+    "https://*.netlify.app/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://staging.dashboard.reap.global/*"],
+      "js": ["content-staging.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://*.netlify.app/*"],
+      "js": ["content-preview.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
