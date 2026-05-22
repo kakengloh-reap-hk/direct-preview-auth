@@ -2,6 +2,8 @@
 
 Chrome extension that copies `access_token` and `refresh_token` from a logged-in staging tab into Reap Netlify deploy preview tabs.
 
+![Reap Preview Auth demo](assets/preview-auth-demo.gif)
+
 ## Install
 
 1. Open `chrome://extensions`.
