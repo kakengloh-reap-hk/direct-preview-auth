@@ -20,6 +20,11 @@
 
   localStorage.setItem("access_token", tokens.access_token);
   localStorage.setItem("refresh_token", tokens.refresh_token);
+  localStorage.setItem("remember_me", "true");
+  localStorage.setItem(
+    "remember_me_expiry",
+    new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString(),
+  );
   publishCurrentTokens();
   sessionStorage.setItem("__reap_preview_auth_applied", "1");
   location.reload();
